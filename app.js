@@ -24,7 +24,7 @@ const MockAdapter = require("@bot-whatsapp/database/mock");
 
 let STATUS = {};
 
-const flowHola = addKeyword("console")
+const flowHola = addKeyword(["hola","ola","buen"])
   .addAnswer(
     "Hola! soy un chatbot que está vinculado con Google SpreadSheet, *responde a las siguientes preguntas*:"
   )
@@ -126,8 +126,8 @@ const flowHola = addKeyword("console")
 //////////////////////////// FLUJO PARA CONSULTAR DATOS /////////////////////////////////////////////////////////
 
 const flowConsultar = addKeyword(
-  "Consultar mis datos",
-  "🔍 Consultar mis datos 🔍"
+  ["Consultar mis datos",
+  "🔍 Consultar mis datos 🔍","consultar","ver","datos"]
 )
   .addAnswer([
     "Dame unos segundo, estoy buscando tus datos dentro del sistema... 🔍",
