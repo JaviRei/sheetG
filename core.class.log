@@ -1,28 +1,27 @@
 [handleMsg]:  {
   key: {
-    remoteJid: '5213318107706@s.whatsapp.net',
+    remoteJid: '5213322542808@s.whatsapp.net',
     fromMe: false,
-    id: '3A277EE7624FA1CF9738',
+    id: '3A69FB01E1CCAF08123B',
     participant: undefined
   },
-  messageTimestamp: 1698388631,
+  messageTimestamp: 1698732273,
   pushName: 'Javi Enriquez',
   broadcast: false,
   message: Message {
-    conversation: 'Console',
+    conversation: 'Ola',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  verifiedBizName: 'Javi Enriquez',
-  body: 'Console',
-  from: '5213318107706'
+  body: 'Ola',
+  from: '5213322542808'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_ba1e8992-e467-488e-8d0c-b02dcafd3608',
-  keyword: 'key_839b8db1-9528-4034-97ae-e5b4ddc6535a',
-  answer: 'Hola! soy un chatbot que está vinculado con Google SpreadSheet, *responde a las siguientes preguntas*:',
+  ref: 'ans_8164e548-0c7f-47d1-8b17-42d8bedff680',
+  keyword: 'key_e54292fe-58bc-47a0-88c3-de1243eb0343',
+  answer: 'Hola! soy un chatbot que está vinculado con Google SpreadSheet, y msql *responde a las siguientes preguntas*:',
   options: {
     media: null,
     buttons: [],
@@ -34,12 +33,12 @@
     keyword: {},
     callback: false
   },
-  refSerialize: '4ee2eac8fa690f996bb7ec2c10e96a8c'
+  refSerialize: '7f1c3e61294c44039cb0e4d816452dcf'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_46bc9451-5d6c-49c4-81a5-e579feb3801f',
-  keyword: 'ans_ba1e8992-e467-488e-8d0c-b02dcafd3608',
-  answer: 'Dime tu sexo\nHombre o Mujer',
+  ref: 'ans_266dd72b-e58e-4f5d-bf90-8b333880b8e1',
+  keyword: 'ans_8164e548-0c7f-47d1-8b17-42d8bedff680',
+  answer: '¿Cúal es tu sexo?: \nHombre o Mujer',
   options: {
     media: null,
     buttons: [],
@@ -51,32 +50,31 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '10a1fb84323bacce7a7c50201bb3ff54'
+  refSerialize: '7640bd6ce414cbc36b9b42c229dc000f'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '5213318107706@s.whatsapp.net',
+    remoteJid: '5213322542808@s.whatsapp.net',
     fromMe: false,
-    id: '3A37ED2E2F309DFA3D5E',
+    id: '3AE47E3634F4000BF228',
     participant: undefined
   },
-  messageTimestamp: 1698388640,
+  messageTimestamp: 1698732277,
   pushName: 'Javi Enriquez',
   broadcast: false,
   message: Message {
-    conversation: 'Hombre',
+    conversation: 'Nujer',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  verifiedBizName: 'Javi Enriquez',
-  body: 'Hombre',
-  from: '5213318107706'
+  body: 'Nujer',
+  from: '5213322542808'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_39473653-bd97-4db5-8198-c8e438481e62',
-  keyword: 'ans_46bc9451-5d6c-49c4-81a5-e579feb3801f',
+  ref: 'ans_d7e9deb6-17d5-4518-b165-777830ce04cf',
+  keyword: 'ans_266dd72b-e58e-4f5d-bf90-8b333880b8e1',
   answer: 'Dime tu nombre',
   options: {
     media: null,
@@ -89,32 +87,31 @@
     keyword: {},
     callback: true
   },
-  refSerialize: 'a66e29592b2cc63bf3cd29b6579df173'
+  refSerialize: '3ebf010c2f018ece513648426ee7967f'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '5213318107706@s.whatsapp.net',
+    remoteJid: '5213322542808@s.whatsapp.net',
     fromMe: false,
-    id: '3A3503F3BD8213729C10',
+    id: '3ADB9FD94CD42275E35E',
     participant: undefined
   },
-  messageTimestamp: 1698388643,
+  messageTimestamp: 1698732280,
   pushName: 'Javi Enriquez',
   broadcast: false,
   message: Message {
-    conversation: 'Javier',
+    conversation: 'Jair',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  verifiedBizName: 'Javi Enriquez',
-  body: 'Javier',
-  from: '5213318107706'
+  body: 'Jair',
+  from: '5213322542808'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_515fa426-b3d5-4bb5-96af-0eefa1d3172e',
-  keyword: 'ans_39473653-bd97-4db5-8198-c8e438481e62',
+  ref: 'ans_894629e8-13aa-4e29-8f4d-f4c9e6172c13',
+  keyword: 'ans_d7e9deb6-17d5-4518-b165-777830ce04cf',
   answer: 'Dime tus apellidos',
   options: {
     media: null,
@@ -127,32 +124,31 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '76440c5422d176aa52d7e5b1b0606702'
+  refSerialize: '26ba0b205fae0d737277018308c86591'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '5213318107706@s.whatsapp.net',
+    remoteJid: '5213322542808@s.whatsapp.net',
     fromMe: false,
-    id: '3A1FC2CC9BC712A71EC0',
+    id: '3AE79885AFFF60DAFBC1',
     participant: undefined
   },
-  messageTimestamp: 1698388649,
+  messageTimestamp: 1698732286,
   pushName: 'Javi Enriquez',
   broadcast: false,
   message: Message {
-    conversation: 'Enríquez Reyes',
+    conversation: 'Wong',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  verifiedBizName: 'Javi Enriquez',
-  body: 'Enríquez Reyes',
-  from: '5213318107706'
+  body: 'Wong',
+  from: '5213322542808'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_f0ce4c86-8c30-4c3d-a4af-2402fbe38f64',
-  keyword: 'ans_515fa426-b3d5-4bb5-96af-0eefa1d3172e',
+  ref: 'ans_f250c926-1ed7-4668-b660-072b4fdb0172',
+  keyword: 'ans_894629e8-13aa-4e29-8f4d-f4c9e6172c13',
   answer: '¿Qué edad tienes?',
   options: {
     media: null,
@@ -165,402 +161,25 @@
     keyword: {},
     callback: true
   },
-  refSerialize: 'b6b556f1e2c7678f939bb6c5d15d90fe'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5213318107706@s.whatsapp.net',
-    fromMe: false,
-    id: '3A22AD97E82E3AEF3C5F',
-    participant: undefined
-  },
-  messageTimestamp: 1698388652,
-  pushName: 'Javi Enriquez',
-  broadcast: false,
-  message: Message {
-    conversation: '23',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  verifiedBizName: 'Javi Enriquez',
-  body: '23',
-  from: '5213318107706'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5213318107706@s.whatsapp.net',
-    fromMe: false,
-    id: '3A20EBB72353D8525BD4',
-    participant: undefined
-  },
-  messageTimestamp: 1698388734,
-  pushName: 'Javi Enriquez',
-  broadcast: false,
-  message: Message {
-    conversation: 'Gracias',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  verifiedBizName: 'Javi Enriquez',
-  body: 'Gracias',
-  from: '5213318107706'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5213318107706@s.whatsapp.net',
-    fromMe: false,
-    id: '3A7E51843FA880290D02',
-    participant: undefined
-  },
-  messageTimestamp: 1698388738,
-  pushName: 'Javi Enriquez',
-  broadcast: false,
-  message: Message {
-    conversation: 'A',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  verifiedBizName: 'Javi Enriquez',
-  body: 'A',
-  from: '5213318107706'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5213318107706@s.whatsapp.net',
-    fromMe: false,
-    id: '3A6FF509503381CCF31A',
-    participant: undefined
-  },
-  messageTimestamp: 1698388751,
-  pushName: 'Javi Enriquez',
-  broadcast: false,
-  message: Message {
-    conversation: 'Consultar mis datos',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  verifiedBizName: 'Javi Enriquez',
-  body: 'Consultar mis datos',
-  from: '5213318107706'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_31d060d9-cea8-4f8f-bfe9-4bd5c061d624',
-  keyword: 'key_b883ac3c-59ae-492f-a7c6-dfbdc147a7aa',
-  answer: 'Dame unos segundo, estoy buscando tus datos dentro del sistema... 🔍',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 0,
-    idle: null,
-    nested: [],
-    keyword: {},
-    callback: false
-  },
-  refSerialize: 'b1126cd20f69ed86632ca03b55bad5c4'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_6a8f31e2-71a6-4063-8a21-bb54bf51b20d',
-  keyword: 'ans_31d060d9-cea8-4f8f-bfe9-4bd5c061d624',
-  answer: 'Según el teléfono del cuál me estas escribiendo, tengo estos datos:',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 3000,
-    idle: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '8b5d75904dfd5faa6a5beeeea6058ea8'
+  refSerialize: '879de56ebd84a04c97204bf30359c213'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '5213322542808@s.whatsapp.net',
     fromMe: false,
-    id: '3AE0D4D3809AB5FD251D',
+    id: '3A815CB5FE09C4F7A59A',
     participant: undefined
   },
-  messageTimestamp: 1698388950,
+  messageTimestamp: 1698732288,
   pushName: 'Javi Enriquez',
   broadcast: false,
   message: Message {
-    conversation: 'Consolé',
+    conversation: '65',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'Consolé',
+  body: '65',
   from: '5213322542808'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5213322542808@s.whatsapp.net',
-    fromMe: false,
-    id: '3ADDA1C10E46E325DA8E',
-    participant: undefined
-  },
-  messageTimestamp: 1698388959,
-  pushName: 'Javi Enriquez',
-  broadcast: false,
-  message: Message {
-    conversation: 'Console',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Console',
-  from: '5213322542808'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_ba1e8992-e467-488e-8d0c-b02dcafd3608',
-  keyword: 'key_839b8db1-9528-4034-97ae-e5b4ddc6535a',
-  answer: 'Hola! soy un chatbot que está vinculado con Google SpreadSheet, *responde a las siguientes preguntas*:',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 0,
-    idle: null,
-    nested: [],
-    keyword: {},
-    callback: false
-  },
-  refSerialize: '4ee2eac8fa690f996bb7ec2c10e96a8c'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_46bc9451-5d6c-49c4-81a5-e579feb3801f',
-  keyword: 'ans_ba1e8992-e467-488e-8d0c-b02dcafd3608',
-  answer: 'Dime tu sexo\nHombre o Mujer',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '10a1fb84323bacce7a7c50201bb3ff54'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5213322542808@s.whatsapp.net',
-    fromMe: false,
-    id: '3A6B7371DA2F165E3B61',
-    participant: undefined
-  },
-  messageTimestamp: 1698388963,
-  pushName: 'Javi Enriquez',
-  broadcast: false,
-  message: Message {
-    conversation: 'Mujer',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Mujer',
-  from: '5213322542808'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_39473653-bd97-4db5-8198-c8e438481e62',
-  keyword: 'ans_46bc9451-5d6c-49c4-81a5-e579feb3801f',
-  answer: 'Dime tu nombre',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: 'a66e29592b2cc63bf3cd29b6579df173'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5213322542808@s.whatsapp.net',
-    fromMe: false,
-    id: '3A5CB5C0BC25368605F2',
-    participant: undefined
-  },
-  messageTimestamp: 1698388967,
-  pushName: 'Javi Enriquez',
-  broadcast: false,
-  message: Message {
-    conversation: 'Gabriela',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Gabriela',
-  from: '5213322542808'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_515fa426-b3d5-4bb5-96af-0eefa1d3172e',
-  keyword: 'ans_39473653-bd97-4db5-8198-c8e438481e62',
-  answer: 'Dime tus apellidos',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '76440c5422d176aa52d7e5b1b0606702'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5213322542808@s.whatsapp.net',
-    fromMe: false,
-    id: '3A525C3AD9A7A5B780EB',
-    participant: undefined
-  },
-  messageTimestamp: 1698388972,
-  pushName: 'Javi Enriquez',
-  broadcast: false,
-  message: Message {
-    conversation: 'Reyes López',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Reyes López',
-  from: '5213322542808'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_f0ce4c86-8c30-4c3d-a4af-2402fbe38f64',
-  keyword: 'ans_515fa426-b3d5-4bb5-96af-0eefa1d3172e',
-  answer: '¿Qué edad tienes?',
-  options: {
-    media: null,
-    buttons: [],
-    capture: true,
-    child: null,
-    delay: 0,
-    idle: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: 'b6b556f1e2c7678f939bb6c5d15d90fe'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5213322542808@s.whatsapp.net',
-    fromMe: false,
-    id: '3A8F0015477DC070494B',
-    participant: undefined
-  },
-  messageTimestamp: 1698388975,
-  pushName: 'Javi Enriquez',
-  broadcast: false,
-  message: Message {
-    conversation: '55',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: '55',
-  from: '5213322542808'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5213322542808@s.whatsapp.net',
-    fromMe: false,
-    id: '3A207A9825430D7820A2',
-    participant: undefined
-  },
-  messageTimestamp: 1698388981,
-  pushName: 'Javi Enriquez',
-  broadcast: false,
-  message: Message {
-    conversation: 'Consultar',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Consultar',
-  from: '5213322542808'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '5213322542808@s.whatsapp.net',
-    fromMe: false,
-    id: '3A9D79A140F046DEAE7A',
-    participant: undefined
-  },
-  messageTimestamp: 1698388987,
-  pushName: 'Javi Enriquez',
-  broadcast: false,
-  message: Message {
-    conversation: 'Consultar mis datos',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'Consultar mis datos',
-  from: '5213322542808'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_31d060d9-cea8-4f8f-bfe9-4bd5c061d624',
-  keyword: 'key_b883ac3c-59ae-492f-a7c6-dfbdc147a7aa',
-  answer: 'Dame unos segundo, estoy buscando tus datos dentro del sistema... 🔍',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 0,
-    idle: null,
-    nested: [],
-    keyword: {},
-    callback: false
-  },
-  refSerialize: 'b1126cd20f69ed86632ca03b55bad5c4'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_6a8f31e2-71a6-4063-8a21-bb54bf51b20d',
-  keyword: 'ans_31d060d9-cea8-4f8f-bfe9-4bd5c061d624',
-  answer: 'Según el teléfono del cuál me estas escribiendo, tengo estos datos:',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 3000,
-    idle: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: '8b5d75904dfd5faa6a5beeeea6058ea8'
 }

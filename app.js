@@ -1,8 +1,26 @@
+const {conexion} = require("./src/mysql")
+const {flowConsultar, consultarDatos} = require("./flows/consultar")
 const { GoogleSpreadsheet } = require("google-spreadsheet");
 const fs = require("fs");
 const RESPONSES_SHEET_ID = "11aKH7Vex2R1FS4P33BDdcoxMNUIPXS-FySgrFppVY8w"; //Aquí pondras el ID de tu hoja de Sheets
 const doc = new GoogleSpreadsheet(RESPONSES_SHEET_ID);
 const CREDENTIALS = JSON.parse(fs.readFileSync("./credenciales.json"));
+const MySQLAdapter = require('@bot-whatsapp/database/mysql')
+
+const MYSQL_DB_HOST = 'localhost';
+const MYSQL_DB_USER = 'root';
+const MYSQL_DB_PASSWORD = '';
+const MYSQL_DB_NAME = "practica_db";
+const MYSQL_DB_PORT = '3306';
+
+conexion.connect((err) => {
+  if(err){
+   throw err;
+  }
+  else{
+   console.log('Conexión exitosa')
+  }
+})
 
 const {
   createBot,
@@ -14,33 +32,26 @@ const {
 
 const QRPortalWeb = require("@bot-whatsapp/portal");
 const BaileysProvider = require("@bot-whatsapp/provider/baileys");
-const MockAdapter = require("@bot-whatsapp/database/mock");
 
-/*                       Para añadir o eliminar alguna pregunta sigue los siguientes pasos:
-1) ➡️ Crea el addAnswer
-2) ➡️ Crea la variable del STATUS
-3) ➡️ Añade el nombre de la columna de Sheets junto con su variable
-                      */
+
 
 let STATUS = {};
 
-const flowHola = addKeyword("console")
+const flowHola = addKeyword(['hola','ola','alo','buenos'])
   .addAnswer(
-    "Hola! soy un chatbot que está vinculado con Google SpreadSheet, *responde a las siguientes preguntas*:"
+    "Hola! soy un chatbot que está vinculado con Google SpreadSheet, y msql *responde a las siguientes preguntas*:"
   )
   .addAnswer(
-    ["Dime tu sexo","Hombre o Mujer"],
-    { capture: true/* , buttons: [{ body: "Hombre" }, { body: "Mujer" }]  */},
+    ["¿Cúal es tu sexo?: ","Hombre o Mujer"],
+    { capture: true},
     async (ctx, { flowDynamic }) => {
       telefono = ctx.from;
       sexo = STATUS[telefono] = { ...STATUS[telefono], sexo: ctx.body }; //➡️ Variable del STATUS
       telefono = STATUS[telefono] = { ...STATUS[telefono], telefono: ctx.from }; // Variable del STATUS
       // Ejemplo // NOMBRE VARIABLE = TATUS[telefono], NOMBRE VARIABLE : ctx.body
-
       flowDynamic();
     }
   )
-
   .addAnswer(
     "Dime tu nombre",
     { capture: true },
@@ -51,7 +62,6 @@ const flowHola = addKeyword("console")
       flowDynamic();
     }
   )
-
   .addAnswer(
     "Dime tus apellidos",
     { capture: true },
@@ -65,17 +75,12 @@ const flowHola = addKeyword("console")
       flowDynamic();
     }
   )
-
-
-
   .addAnswer(
     "¿Qué edad tienes?",
     { capture: true },
     async (ctx, { flowDynamic }) => {
       telefono = ctx.from;
       edad = STATUS[telefono] = { ...STATUS[telefono], edad: ctx.body }; //Variable del STATUS
-
-      
       
       /////////////////////  FUNCION PARA AGREGAR LOS DATOS A SHEETS /////////////////////////////
 
@@ -95,7 +100,8 @@ const flowHola = addKeyword("console")
             Edad: STATUS[telefono].edad,
           },
         ];
-
+        const name = `INSERT INTO users (user_id, user_handle, user_email, first_name, last_name, phone_number, created_at) VALUES (NULL, ${rows.Sexo.values()}, NULL, ${nombre},'NULL','NULL', current_timestamp())`;
+      await insert_db(name)
 
         await doc.useServiceAccountAuth({
           client_email: CREDENTIALS.client_email,
@@ -123,64 +129,27 @@ const flowHola = addKeyword("console")
     }
   );
 
-//////////////////////////// FLUJO PARA CONSULTAR DATOS /////////////////////////////////////////////////////////
 
-const flowConsultar = addKeyword(
-  "Consultar mis datos",
-  "🔍 Consultar mis datos 🔍"
-)
-  .addAnswer([
-    "Dame unos segundo, estoy buscando tus datos dentro del sistema... 🔍",
-  ])
-  .addAnswer(
-    ["Según el teléfono del cuál me estas escribiendo, tengo estos datos:"],
-    { delay: 3000 },
-    async (ctx, { flowDynamic }) => {
-      telefono = ctx.from;
-
-      const consultar = await consultarDatos(telefono);
-
-      const Sexo = consultados["Sexo"]; // AQUI DECLARAMOS LAS VARIABLES CON LOS DATOS QUE NOS TRAEMOS DE LA FUNCION         VVVVVVVVV
-      const Nombre = consultados["Nombre"];
-      const Apellidos = consultados["Apellidos"];
-      const Telefono = consultados["Telefono"];
-      const Edad = consultados["Edad"];
-
-      await flowDynamic(
-        `- *Sexo*: ${Sexo}\n- *Nombre*: ${Nombre}\n- *Apellidos*: ${Apellidos}\n- *Telefono*: ${Telefono}\n- *Edad*: ${Edad}`
-      );
-    }
-  );
-
-/////////////////////       ESTA FUNCION CONSULTA LOS DATOS DE UNA FILA !SEGÚN EL TELÉFONO!    /////////////////////////
-
-async function consultarDatos(telefono) {
-  await doc.useServiceAccountAuth({
-    client_email: CREDENTIALS.client_email,
-    private_key: CREDENTIALS.private_key,
+  const insert_db = async (name)=> {
+    conexion.query(name,(error,rows) => {
+      if(error){
+          throw error;
+      }
+      else{
+          console.log('Datos ingresados');
+          console.log(rows)
+      }
   });
-  await doc.loadInfo();
-  let sheet = doc.sheetsByTitle["Hoja 1"]; // AQUÍ DEBES PONER EL NOMBRE DE TU HOJA
-
-  consultados = [];
-
-  let rows = await sheet.getRows();
-  for (let index = 0; index < rows.length; index++) {
-    const row = rows[index];
-    if (row.Telefono === telefono) {
-      consultados["Sexo"] = row.Sexo; // AQUÍ LE PEDIMOS A LA FUNCION QUE CONSULTE LOS DATOS QUE QUEREMOS CONSULTAR EJEMPLO:
-      consultados["Nombre"] = row.Nombre;
-      consultados["Apellidos"] = row.Apellidos; // consultados['EL NOMBRE QUE QUIERAS'] = row.NOMBRE DE LA COLUMNA DE SHEET
-      consultados["Telefono"] = row.Telefono;
-      consultados["Edad"] = row.Edad;
-    }
   }
 
-  return consultados;
-}
-
 const main = async () => {
-  const adapterDB = new MockAdapter();
+  const adapterDB = new MySQLAdapter({
+    host: MYSQL_DB_HOST,
+    user: MYSQL_DB_USER,
+    database: MYSQL_DB_NAME,
+    password: MYSQL_DB_PASSWORD,
+    port: MYSQL_DB_PORT,
+})
   const adapterFlow = createFlow([flowHola, flowConsultar]);
   const adapterProvider = createProvider(BaileysProvider);
 
